@@ -1,0 +1,32 @@
+<section id="education" class="wrap">
+    <div class="section-head">
+        <span class="section-tag">EDUCATION</span>
+        <h2 class="section-title">Academic & Learning Journey</h2>
+    </div>
+
+    <div class="education-timeline">
+        @for (edu of educationList; track edu.degree) {
+        <div class="glass edu-card">
+            <div class="edu-header">
+                <div class="edu-title-group">
+                    <h3 class="edu-degree">{{ edu.degree }}</h3>
+                    <span class="edu-institute">{{ edu.institution }}</span>
+                </div>
+                <span class="edu-duration">{{ edu.duration }}</span>
+            </div>
+
+            @if (edu.description) {
+            <p class="edu-desc">{{ edu.description }}</p>
+            }
+
+            @if (edu.highlights && edu.highlights.length > 0) {
+            <div class="edu-highlights">
+                @for (highlight of edu.highlights; track highlight) {
+                <span class="edu-badge">{{ highlight }}</span>
+                }
+            </div>
+            }
+        </div>
+        }
+    </div>
+</section>

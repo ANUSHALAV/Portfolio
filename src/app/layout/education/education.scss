@@ -1,0 +1,90 @@
+.education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    max-width: 900px;
+    /* Aligns neatly if your text layout is compact */
+}
+
+/* Reusing your glass theme while adding padding and layout rules */
+.edu-card {
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.edu-card:hover {
+    transform: translateY(-2px);
+}
+
+.edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    /* Fallback for smaller mobile screens */
+}
+
+.edu-degree {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+    color: var(--text-primary, #ffffff);
+    /* Fallback to white if variable isn't used */
+}
+
+.edu-institute {
+    font-size: 1rem;
+    color: var(--text-muted, #a0aec0);
+    font-weight: 500;
+}
+
+.edu-duration {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    color: var(--text-secondary, #cbd5e1);
+}
+
+.edu-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-muted, #94a3b8);
+    margin: 0;
+}
+
+.edu-highlights {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+/* Clean, modern pill tags for specific skillsets learned */
+.edu-badge {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    color: var(--text-secondary, #e2e8f0);
+}
+
+@media (max-width: 768px) {
+    .edu-header {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .edu-duration {
+        align-self: flex-start;
+    }
+}
