@@ -29,6 +29,13 @@ export class Education {
       duration: '2020 — 2023',
       description: 'Built a foundational core in database management systems, procedural & object-oriented programming, and web utility development.',
       highlights: ['Core Java / JS', 'Database Management (DBMS)', 'Data Flow & Logic Design']
+    },
+    {
+      degree: 'Intermediate',
+      institution: 'SVM Inter College Dhalwala Uttarakhand India.',
+      duration: '2019 — 2020',
+      description: '',
+      highlights: ['Physics','Chamistry','Biology','Hindi','English']
     }
   ];
 }

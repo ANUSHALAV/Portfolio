@@ -31,7 +31,7 @@ export class Experiance {
         'Developed a full-featured CMS to manage and publish digital content with role-based workflows (admin, editor, viewer)',
         'Collaborated with cross-functional teams to gather requirements, review code, and deliver features on schedule'
       ],
-      tags: ['Angular', 'ASP.NET Core', 'C#', 'MongoDB', 'REST APIs', 'TypeScript', 'Git'],
+      tags: ['Angular', 'ASP.NET Core', 'C#', 'MongoDB', 'REST APIs', 'TypeScript', 'Git','Github','Jira','Postman'],
       isActive: true
     },
     {
@@ -46,7 +46,7 @@ export class Experiance {
         'Participated in code reviews and agile sprint ceremonies to understand team workflows',
         'Worked on internal tooling and bug fixes to support production applications'
       ],
-      tags: ['Angular', 'ASP.NET Core', 'C#', 'MongoDB', 'REST APIs', 'TypeScript', 'Git'],
+      tags: ['Angular', 'ASP.NET Core', 'C#', 'MongoDB', 'REST APIs', 'TypeScript', 'Git','Github','Jira','Postman'],
       isActive: false
     },
     {
@@ -61,7 +61,7 @@ export class Experiance {
         'Managed source code and feature branches using Git and GitHub',
         'Delivered multiple small projects independently within tight deadlines'
       ],
-      tags: ['HTML', 'CSS', 'JS', 'Bootstrap', 'Git'],
+      tags: ['HTML', 'CSS', 'JS', 'Bootstrap', 'Git','Github'],
       isActive: false
     }
   ];
