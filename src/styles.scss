@@ -586,7 +586,6 @@ h2.section-title {
     }
 }
 
-// experiance section
 /* ---------- experience ---------- */
 .timeline {
     position: relative;
@@ -743,6 +742,92 @@ h2.section-title {
         flex-direction: column;
         gap: 10px;
     }
+}
+
+/*==========================
+        TECH STACK
+==========================*/
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:24px;
+}
+
+@media(max-width:768px){
+    .tech-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+.tech-card{
+    padding:32px;
+    transition:.35s;
+}
+
+.tech-icon{
+    width:58px;
+    height:58px;
+    border-radius:14px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(135deg,
+    rgba(61,125,255,.18),
+    rgba(139,124,246,.18));
+
+    border:1px solid rgba(120,160,255,.25);
+
+    margin-bottom:24px;
+}
+
+.tech-icon i{
+    font-size:22px;
+    color:var(--blue-bright);
+}
+
+.tech-card h3{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:1.35rem;
+    margin-bottom:22px;
+    color:var(--text-hi);
+}
+
+.tech-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tech-tags span{
+
+    padding:9px 16px;
+
+    border-radius:100px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid var(--glass-border);
+
+    color:var(--text-mid);
+
+    font-size:.85rem;
+
+    transition:.3s;
+}
+
+.tech-tags span:hover{
+
+    color:white;
+
+    border-color:var(--glass-border-hi);
+
+    background:rgba(61,125,255,.12);
+
+    transform:translateY(-2px);
+
 }
 
 /* ---------- contact ---------- */

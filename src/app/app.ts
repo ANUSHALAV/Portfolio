@@ -8,13 +8,14 @@ import { Contact } from "./layout/contact/contact";
 import { Footer } from "./layout/footer/footer";
 import { Project } from "./layout/project/project";
 import { Experiance } from "./layout/experiance/experiance";
+import { TechStack } from "./layout/tech-stack/tech-stack";
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  imports: [RouterOutlet,Navbar,Hero,About,Education,Contact,Footer,Project,Experiance]
+  imports: [RouterOutlet,Navbar,Hero,About,Education,Contact,Footer,Project,Experiance,TechStack]
 })
 export class App {
 }
