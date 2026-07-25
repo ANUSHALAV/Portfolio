@@ -4,8 +4,8 @@
         <h2 class="section-title">A few thing</h2>
     </div>
     <div class="projects-grid">
-
-        <div class="glass project-card ">
+        @for(project of projects; track project.title) {
+        <div class="glass project-card">
             <div class="project-top">
                 <div class="project-icon">
                     <i class="fa-solid fa-code"></i>
@@ -14,66 +14,14 @@
                     <i class="fa-solid fa-external-link-alt"></i>
                 </a>
             </div>
-            <h3 class="project-title">Pulse Dashboard</h3>
-            <p class="project-desc">Real-time analytics platform processing 2M+ events daily, with sub-100ms query
-                response via edge caching.</p>
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-desc">{{project.description}}</p>
             <div class="tag-row">
-                <span class="tag">React</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">Redis</span>
+                <span class="tag">Angualar</span>
+                <span class="tag">Asp.Net Core</span>
+                <span class="tag">MongoDB</span>
             </div>
         </div>
-
-        <div class="glass project-card ">
-            <div class="project-top">
-                <div class="project-icon">
-                    <i class="fa-solid fa-code"></i>
-                </div>
-                <a href="#" class="project-link" aria-label="Open project">
-                    <i class="fa-solid fa-external-link-alt"></i>
-                </a>
-            </div>
-            <h3 class="project-title">Synca</h3>
-            <p class="project-desc">Offline-first task sync engine with conflict resolution, used across 40k+ devices
-                with near-zero data loss.</p>
-            <div class="tag-row">
-                <span class="tag">TypeScript</span>
-                <span class="tag">CRDTs</span>
-                <span class="tag">SQLite</span>
-            </div>
-        </div>
-
-        <div class="glass project-card ">
-            <div class="project-top">
-                <div class="project-icon">
-                    <i class="fa-solid fa-code"></i>
-                </div>
-                <a href="#" class="project-link" aria-label="Open project">
-                    <i class="fa-solid fa-external-link-alt"></i>
-                </a>
-            </div>
-            <h3 class="project-title">Voltage CLI</h3>
-            <p class="project-desc">Developer tool that cuts deployment config time from hours to minutes with
-                zero-downtime rollouts.</p>
-            <div class="tag-row">
-                <span class="tag">Go</span>
-                <span class="tag">Docker</span>
-                <span class="tag">AWS</span>
-            </div>
-        </div>
-
-        <div class="glass project-card ">
-            <div class="project-top">
-                <div class="project-icon">
-                    <i class="fa-solid fa-code"></i>
-                </div>
-                <a href="#" class="project-link" aria-label="Open project">
-                    <i class="fa-solid fa-external-link-alt"></i>
-                </a>
-            </div>
-            <h3 class="project-title">Gridline UI</h3>
-            <p class="project-desc">Open-source component library with 60+ accessible primitives, adopted by 12 product
-                teams internally.</p>
-        </div>
+        }
     </div>
 </section>

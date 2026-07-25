@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class Project {
 
+  projects: any[] = [
+    {
+      title: 'Clinic Management System',
+      description: 'A comprehensive solution for managing clinic operations, including patient records, appointments, and billing.'
+    }
+  ];
 }
