@@ -12,7 +12,14 @@
                     <h3 class="edu-degree">{{ edu.degree }}</h3>
                     <span class="edu-institute">{{ edu.institution }}</span>
                 </div>
-                <span class="edu-duration">{{ edu.duration }}</span>
+
+                <div class="edu-meta">
+                    <span class="edu-duration">{{ edu.duration }}</span>
+
+                    @if (edu.grade) {
+                    <span class="grade-badge">{{ edu.grade }}</span>
+                    }
+                </div>
             </div>
 
             @if (edu.description) {

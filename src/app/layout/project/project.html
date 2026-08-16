@@ -10,16 +10,17 @@
                 <div class="project-icon">
                     <i class="fa-solid fa-code"></i>
                 </div>
-                <a href="#" class="project-link" aria-label="Open project">
+                <a [href]="project.projectLink" target="_blank" class="project-link" aria-label="Open project">
                     <i class="fa-solid fa-external-link-alt"></i>
                 </a>
             </div>
             <h3 class="project-title">{{ project.title }}</h3>
             <p class="project-desc">{{project.description}}</p>
+
             <div class="tag-row">
-                <span class="tag">Angualar</span>
-                <span class="tag">Asp.Net Core</span>
-                <span class="tag">MongoDB</span>
+                @for(tag of project.tag.split(', '); track tag) {
+                <span class="tag">{{ tag }}</span>
+                }
             </div>
         </div>
         }
