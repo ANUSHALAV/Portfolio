@@ -5,35 +5,43 @@
     </div>
 
     <div class="education-timeline">
-        @for (edu of educationList; track edu.degree) {
-        <div class="glass edu-card">
-            <div class="edu-header">
-                <div class="edu-title-group">
-                    <h3 class="edu-degree">{{ edu.degree }}</h3>
-                    <span class="edu-institute">{{ edu.institution }}</span>
+        @for (edu of educationList; track edu.degree; let isLatest = $first) {
+        <article class="edu-step" [class.latest-milestone]="isLatest">
+            <span class="edu-node" aria-hidden="true">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </span>
+            <div class="glass edu-card">
+                <div class="edu-header">
+                    <div class="edu-title-group">
+                        <h3 class="edu-degree">{{ edu.degree }}</h3>
+                        <span class="edu-institute">{{ edu.institution }}</span>
+                    </div>
+
+                    <div class="edu-meta">
+                        <span class="edu-duration">{{ edu.duration }}</span>
+                        @if (isLatest) {
+                        <span class="milestone-label">Latest milestone</span>
+                        }
+
+                        @if (edu.grade) {
+                        <span class="grade-badge">{{ edu.grade }}</span>
+                        }
+                    </div>
                 </div>
 
-                <div class="edu-meta">
-                    <span class="edu-duration">{{ edu.duration }}</span>
+                @if (edu.description) {
+                <p class="edu-desc">{{ edu.description }}</p>
+                }
 
-                    @if (edu.grade) {
-                    <span class="grade-badge">{{ edu.grade }}</span>
+                @if (edu.highlights && edu.highlights.length > 0) {
+                <div class="edu-highlights">
+                    @for (highlight of edu.highlights; track highlight) {
+                    <span class="edu-badge">{{ highlight }}</span>
                     }
                 </div>
-            </div>
-
-            @if (edu.description) {
-            <p class="edu-desc">{{ edu.description }}</p>
-            }
-
-            @if (edu.highlights && edu.highlights.length > 0) {
-            <div class="edu-highlights">
-                @for (highlight of edu.highlights; track highlight) {
-                <span class="edu-badge">{{ highlight }}</span>
                 }
             </div>
-            }
-        </div>
+        </article>
         }
     </div>
 </section>

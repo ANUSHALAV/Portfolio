@@ -1,7 +1,7 @@
 <section id="project" class="wrap">
     <div class="section-head ">
-        <span class="section-tag">Project</span>
-        <h2 class="section-title">A few thing</h2>
+        <span class="section-tag">PROJECTS</span>
+        <h2 class="section-title">Selected work</h2>
     </div>
     <div class="projects-grid">
         @for(project of projects; track project.title) {
@@ -10,7 +10,7 @@
                 <div class="project-icon">
                     <i class="fa-solid fa-code"></i>
                 </div>
-                <a [href]="project.projectLink" target="_blank" class="project-link" aria-label="Open project">
+                <a [href]="project.projectLink" target="_blank" rel="noopener noreferrer" class="project-link" [attr.aria-label]="'Open ' + project.title + ' on GitHub'">
                     <i class="fa-solid fa-external-link-alt"></i>
                 </a>
             </div>

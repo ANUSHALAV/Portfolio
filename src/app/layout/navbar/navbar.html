@@ -1,13 +1,24 @@
 <nav>
     <div class="nav-inner">
-        <div class="logo">Anushalav<span>Bhatt</span>.dev</div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#experiance">Experiance</a>
-            <a href="#techStack">Tech Skills</a>
-            <a href="#project">Project</a>
-            <a href="#contact">Contact</a>
+        <a class="logo" href="#home" aria-label="Anushalav Bhatt home">Anushalav <span>Bhatt</span></a>
+        <button
+            class="menu-toggle"
+            type="button"
+            [attr.aria-expanded]="menuOpen"
+            aria-controls="primary-navigation"
+            [attr.aria-label]="menuOpen ? 'Close navigation menu' : 'Open navigation menu'"
+            (click)="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div id="primary-navigation" class="nav-links" [class.is-open]="menuOpen">
+            <a href="#techStack" (click)="closeMenu()">Tech skills</a>
+            <a href="#experiance" (click)="closeMenu()">Experience</a>
+            <a href="#project" (click)="closeMenu()">Projects</a>
+            <a href="#about" (click)="closeMenu()">About</a>
+            <a href="#education" (click)="closeMenu()">Education</a>
+            <a href="#contact" (click)="closeMenu()">Contact</a>
         </div>
     </div>
 </nav>

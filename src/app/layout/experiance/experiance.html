@@ -6,18 +6,23 @@
 
     <div class="timeline">
         @for (exp of experiences; track exp.role) {
-        <div class="exp-card">
+        <article class="exp-card" [class.current-role]="exp.isActive">
             <div class="exp-dot" [class.active]="exp.isActive"></div>
             <div class="card-inner glass">
                 <div class="card-top">
                     <div>
-                        <p class="role">{{ exp.role }}</p>
+                        <h3 class="role">{{ exp.role }}</h3>
                         <p class="company">
                             <i class="ti ti-building" aria-hidden="true"></i>
                             {{ exp.company }}
                         </p>
                     </div>
-                    <span class="date-badge">{{ exp.duration }}</span>
+                    <div class="exp-meta">
+                        <span class="date-badge">{{ exp.duration }}</span>
+                        @if (exp.isActive) {
+                        <span class="current-badge">Current role</span>
+                        }
+                    </div>
                 </div>
                 <p class="desc">{{ exp.description }}</p>
                 <ul class="bullets">
@@ -31,7 +36,7 @@
                     }
                 </div>
             </div>
-        </div>
+        </article>
         }
     </div>
 </section>
