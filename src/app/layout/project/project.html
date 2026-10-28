@@ -1,27 +1,60 @@
 <section id="project" class="wrap">
-    <div class="section-head ">
+    <div class="section-head">
         <span class="section-tag">PROJECTS</span>
         <h2 class="section-title">Selected work</h2>
     </div>
-    <div class="projects-grid">
+    <div class="projects-grid" [class.projects-grid-single]="projects.length === 1">
         @for(project of projects; track project.title) {
         <div class="glass project-card">
             <div class="project-top">
                 <div class="project-icon">
-                    <i class="fa-solid fa-code"></i>
+                    <i class="fa-solid fa-link"></i>
                 </div>
-                <a [href]="project.projectLink" target="_blank" rel="noopener noreferrer" class="project-link" [attr.aria-label]="'Open ' + project.title + ' on GitHub'">
-                    <i class="fa-solid fa-external-link-alt"></i>
-                </a>
+                <span class="project-type">Full-stack</span>
             </div>
             <h3 class="project-title">{{ project.title }}</h3>
-            <p class="project-desc">{{project.description}}</p>
+            <p class="project-desc">{{ project.description }}</p>
 
-            <div class="tag-row">
-                @for(tag of project.tag.split(', '); track tag) {
-                <span class="tag">{{ tag }}</span>
+            <ul class="project-features">
+                @for (feature of project.features; track feature) {
+                <li>{{ feature }}</li>
+                }
+            </ul>
+
+            <div class="project-architecture" aria-label="Project architecture">
+                @for (part of project.architecture; track part.label; let isLast = $last) {
+                <div class="architecture-node">
+                    <span class="architecture-label">{{ part.label }}</span>
+                    <span class="architecture-value">{{ part.value }}</span>
+                </div>
+                @if (!isLast) {
+                <i class="fa-solid fa-arrow-right architecture-connector" aria-hidden="true"></i>
+                }
                 }
             </div>
+
+            <div class="tag-row">
+                @for (technology of project.technologies; track technology) {
+                <span class="tag">{{ technology }}</span>
+                }
+            </div>
+
+            @if (project.frontendLink || project.backendLink) {
+            <div class="repository-links">
+                @if (project.frontendLink) {
+                <a [href]="project.frontendLink" target="_blank" rel="noopener noreferrer" class="repository-link">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    Frontend repository
+                </a>
+                }
+                @if (project.backendLink) {
+                <a [href]="project.backendLink" target="_blank" rel="noopener noreferrer" class="repository-link">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    Backend repository
+                </a>
+                }
+            </div>
+            }
         </div>
         }
     </div>

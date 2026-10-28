@@ -1,84 +1,26 @@
 <section id="techStack" class="wrap">
     <div class="section-head">
-        <span class="section-tag">TECH STACK</span>
+        <span class="section-tag">TECHNICAL SKILLS</span>
         <h2 class="section-title">
-            Technologies I use to build modern web applications.
+            Tools and technologies I use to build reliable web applications.
         </h2>
     </div>
 
     <div class="tech-grid">
-
-        <!-- Frontend -->
+        @for (group of skillGroups; track group.title) {
         <div class="glass tech-card">
             <div class="tech-icon">
-                <i class="fa-solid fa-code"></i>
+                <i [class]="'fa-solid ' + group.icon"></i>
             </div>
 
-            <h3>Frontend</h3>
+            <h3>{{ group.title }}</h3>
 
             <div class="tech-tags">
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JavaScript</span>
-                <span>Bootstrap</span>
-                <span>Tailwind CSS</span>
-                <span>Angular</span>
-                <span>TypeScript</span>
-                <span>PrimeNG</span>
+                @for (skill of group.skills; track skill) {
+                <span>{{ skill }}</span>
+                }
             </div>
         </div>
-
-        <!-- Backend -->
-        <div class="glass tech-card">
-            <div class="tech-icon">
-                <i class="fa-solid fa-server"></i>
-            </div>
-
-            <h3>Backend</h3>
-
-            <div class="tech-tags">
-                <span>ASP.NET Core Web API</span>
-                <span>C#</span>
-                <span>REST API</span>
-                <span>JWT</span>
-                <span>Entity Framework Core</span>
-                <span>LINQ</span>
-            </div>
-        </div>
-
-        <!-- Database -->
-        <div class="glass tech-card">
-            <div class="tech-icon">
-                <i class="fa-solid fa-database"></i>
-            </div>
-
-            <h3>Database</h3>
-
-            <div class="tech-tags">
-                <span>MongoDB</span>
-                <span>MySQL</span>
-                <span>SQL</span>
-            </div>
-        </div>
-
-        <!-- Tools -->
-        <div class="glass tech-card">
-            <div class="tech-icon">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-            </div>
-
-            <h3>Tools & Others</h3>
-
-            <div class="tech-tags">
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Postman</span>
-                <span>Visual Studio</span>
-                <span>VS Code</span>
-                <span>Swagger</span>
-                <span>AWS</span>
-            </div>
-        </div>
-
+        }
     </div>
 </section>

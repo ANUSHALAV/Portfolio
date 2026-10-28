@@ -19,48 +19,30 @@ interface ExperienceSection {
 export class Experiance {
   experiences: ExperienceSection[] = [
     {
-      role: 'Full Stack Developer',
+      role: 'Associate Software Engineer',
       company: 'Bharuwa Solutions Pvt Ltd',
       duration: 'Aug 2024 — Present',
-      description: 'Worked on end-to-end development of web applications — from designing responsive Angular UIs to building scalable RESTful APIs with ASP.NET Core and managing data with MongoDB.',
+      description: 'Build and maintain enterprise web applications across Angular frontends and ASP.NET Core backends.',
       bullets: [
-        'Built and maintained dynamic, component-driven frontends using Angular, improving UI responsiveness and user experience',
-        'Designed and developed RESTful APIs with ASP.NET Core (C#) to support core business features like authentication, CRUD operations, and role-based access',
-        'Managed MongoDB collections and schemas for flexible, high-performance data storage',
-        'Developed a full-featured CMS to manage and publish digital content with role-based workflows (admin, editor, viewer)',
-        'Collaborated with cross-functional teams to gather requirements, review code, and deliver features on schedule'
+        'Developed and maintained responsive enterprise web applications using Angular and ASP.NET Core.',
+        'Built secure REST APIs with JWT authentication and role-based authorization (RBAC).',
+        'Optimized MongoDB queries and aggregation pipelines using proper indexing to improve API response times.',
+        'Collaborated with cross-functional teams in Agile/Scrum ceremonies, code reviews, and sprint planning.'
       ],
-      tags: ['Angular', 'ASP.NET Core', 'C#', 'MongoDB', 'REST APIs', 'TypeScript', 'Git','Github','Jira','Postman'],
+      tags: ['Angular', 'ASP.NET Core', 'MongoDB', 'JWT', 'RBAC', 'Agile/Scrum'],
       isActive: true
     },
     {
-      role: 'Trainee',
+      role: 'Engineer Intern',
       company: 'Bharuwa Solutions Pvt Ltd',
-      duration: 'Nov 2023 — July 2024',
-      description: 'Started as a trainee gaining hands-on experience with enterprise web development, learning the full development lifecycle from requirement gathering to deployment.',
+      duration: 'Nov 2023 — Jul 2024',
+      description: 'Contributed to frontend and backend development for enterprise web applications.',
       bullets: [
-        'Learned and applied Angular fundamentals to build responsive, component-driven UI modules',
-        'Assisted in developing RESTful APIs using ASP.NET Core under senior developer guidance',
-        'Gained practical experience with MongoDB data modelling and query optimization',
-        'Participated in code reviews and agile sprint ceremonies to understand team workflows',
-        'Worked on internal tooling and bug fixes to support production applications'
+        'Developed dynamic forms with reactive validation and modular, reusable PrimeNG components.',
+        'Streamlined backend database operations and integrated frontend services with REST API endpoints.',
+        'Improved client-side data rendering through modularized state-management logic.'
       ],
-      tags: ['Angular', 'ASP.NET Core', 'C#', 'MongoDB', 'REST APIs', 'TypeScript', 'Git','Github','Jira','Postman'],
-      isActive: false
-    },
-    {
-      role: 'Developer Intern',
-      company: 'VervGen Tech Pvt Ltd',
-      duration: 'Sep 2023 — Nov 2023',
-      description: 'Completed a frontend-focused internship building responsive UI components and static web pages, developing a strong foundation in core web technologies.',
-      bullets: [
-        'Designed and developed responsive web pages using HTML, CSS, and JavaScript',
-        'Used Bootstrap to build mobile-first layouts and reusable UI components',
-        'Collaborated with the design team to convert Figma mockups into pixel-perfect HTML pages',
-        'Managed source code and feature branches using Git and GitHub',
-        'Delivered multiple small projects independently within tight deadlines'
-      ],
-      tags: ['HTML', 'CSS', 'JS', 'Bootstrap', 'Git','Github'],
+      tags: ['Angular', 'PrimeNG', 'REST APIs', 'TypeScript'],
       isActive: false
     }
   ];
